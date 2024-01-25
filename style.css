@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-top: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: lightyellow;
+}
+
+button {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 40%;
+    margin-right: 40%;
+    background-color: #b363e8;
+    color: white;
+    border-width: 3px;
+    border-radius: 10px;
+    box-shadow: 0 5px #999;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px #999;
+}
+
+h1 {
+    margin-top: 5%;
+    justify-content: center;
+    align-self: center;
+}

@@ -1,29 +1,57 @@
 function calculator() {
-let input1, input2, result, sign;
+let input1, input2, result, sign, final, equals;
 input1 = Number(prompt("Type The First Number"))
+sign = prompt(" +, -, *,  or /")
 input2 = Number(prompt("Type The Second Number"))
-sign = prompt(" Addition, Subtraction, Multiplication, or Division?")
 result = ""
-
+final = ""
+equals = "="
 if (sign === "+") {
-    result="input1"+"input2";
+    result=input1+input2;
 }
-else if (sign === "x" || "*") {
-    result="input1"*"input2";
+else if (sign === "*") {
+    result=input1*input2;
 }
 else if (sign === "/") {
-    result="input1"/"input2";
+    result=input1/input2;
 }
 else if (sign === "-") {
-    result=Number(input1)-Number(input2);
+    result=input1-input2;
 }
 else {
-    result="How did we get here?"
+    result="one of the four signs wasn't provided"
+    input1=""
+    input2=""
+    sign=""
+    equals=""
 }
+if (isNaN(result)) {
+    final = "The result is not a number"
+}
+else (
+    final = input1 + sign + input2 + equals + result
+)
 document.open()
-document.write( 
-    `<button onclick="calculator()">Click for Magic</button>
-    <h1>` + result  + `</h1>`
+document.write( `<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Calculator</title>
+    <script src="calculator.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <button onclick="calculator()">Click for Magic</button>
+        <h1>${final}</h1>
+    </section>
+
+</body>
+
+</html>`
 )
 document.close()
 }
