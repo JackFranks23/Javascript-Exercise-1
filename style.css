@@ -41,3 +41,16 @@ h1 {
     justify-content: center;
     align-self: center;
 }
+@media only screen and (max-width:640px) {
+section {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50%;
+}
+button {
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+}
